@@ -1,0 +1,96 @@
+:root {
+  --card-height: 65vh;
+  --card-width: calc(var(--card-height) / 1.5);
+}
+ body{
+  min-height: 200px;
+  /* background: #000000; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  box-sizing: border-box;
+  animation: example 3s infinite; 
+
+  
+}
+h1{
+  color: rgb(0, 0, 0);
+  /* font-family: "Titan One", cursive; */
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 50PX;
+  margin-bottom: 20px;
+  animation: ex 3s infinite; 
+} 
+.card{
+  color:white;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),  url("../images/silent.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: var(--card-width);
+  height: var(--card-height);
+  border-radius: 25px; 
+  
+  
+  
+}
+
+@keyframes example {
+  0% { background-color: rgb(0, 0, 0); }  /* Start */
+  50% { background-color: rgb(225, 225, 215); } /* Midway */
+  100% { background-color: rgb(58, 52, 56); } /* End */
+}
+
+@keyframes ex {
+  0% { color:   rgb(225, 225, 215) }  /* Start */
+  50% { color:rgb(0, 0, 0);} /* Midway */
+  100% { color: rgb(255, 255, 255); } /* End */
+}
+
+
+.user {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-family: "Titan One", cursive;
+  animation: ex 3s infinite; 
+}
+#cardtext{
+   font-size:30px;
+   opacity: 0; 
+   visibility: hidden; 
+   
+ 
+}
+
+.card:hover #cardtext {
+  opacity: 1;
+  visibility: visible;
+  font-family: "Gloria Hallelujah", cursive;
+  font-size: 20px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+ 
+
+  color: rgb(255, 255, 255);
+  
+
+}
+@media (max-width: 768px) {
+  #cardtext {
+    font-size: 30px;
+  }
+}
+button{
+  padding: 16px;
+  color:white;
+  background-color: black;
+  border-radius: 10px;
+  
+}
